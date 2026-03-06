@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-height: 90vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+}
+
+/* Main panel */
+.mainPanel {
+    flex: 2;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Current patient card */
+.currentPatientCard {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f1f5f9;
+    margin-bottom: 20px;
+}
+.actionButtons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+.btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.2s;
+}
+.btnComplete {
+    background-color: #10b981;
+    color: #fff;
+}
+.btnComplete:hover {
+    background-color: #059669;
+}
+.btnNext {
+    background-color: #3b82f6;
+    color: #fff;
+}
+.btnNext:hover {
+    background-color: #2563eb;
+}
+.btnCancel {
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+    cursor: pointer;
+    background: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.btnCancel:hover {
+    background-color: #fee2e2;
+}
+
+/* Queue table */
+.queueTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.queueTable th, .queueTable td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+.queueTable th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.statItem {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+}

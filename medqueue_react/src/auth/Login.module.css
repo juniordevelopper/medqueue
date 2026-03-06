@@ -1,0 +1,99 @@
+.mainContainer {
+    width: 100%;
+    background-color: #f4f7f6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+    min-height: 40px;
+}
+
+.navLink { text-decoration: none; color: #1a2a6c; font-weight: 600; display: flex; align-items: center; gap: 4px; transition: 0.5s; }
+.navLink:hover { color: #3498db; transform: scale(1.5)}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 450px; /* Login forma ixcham bo'ladi */
+    background: #fff;
+    padding: 1rem 3rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.title {
+    text-align: center;
+    color: #1a2a6c;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.inputGroup { display: flex; flex-direction: column; gap: 0.5rem; }
+.labelRow { display: flex; justify-content: space-between; align-items: center; }
+.inputGroup label { font-size: 13px; font-weight: 700; color: #34495e; }
+
+.inputGroup input {
+    padding: 0.8rem 1rem;
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.inputGroup input:focus { border-color: #3498db; }
+
+.passwordWrapper { position: relative; display: flex; align-items: center; }
+.passwordWrapper input { width: 100%; padding-right: 3rem; }
+
+.eyeBtn {
+    position: absolute; right: 1rem;
+    background: none; border: none; color: #95a5a6; cursor: pointer;
+    display: flex; align-items: center;
+}
+
+.submitBtn {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #1a2a6c, #3498db);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.submitBtn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3); }
+.submitBtn:disabled { background: #bdc3c7; cursor: not-allowed; transform: none; }
+
+.footer { margin-top: 2rem; text-align: center; color: #7f8c8d; font-size: 14px; }
+.footer a { color: #3498db; text-decoration: none; font-weight: 700; }
+
+.spinner { animation: rotate 1s linear infinite; }
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* MOBIL */
+@media screen and (max-width: 480px) {
+    .card { padding: 2rem 1.5rem; border-radius: 1rem; box-shadow: none; max-width: 100%; }
+    .wrapper { padding: 0; }
+    .title { font-size: 26px; }
+}

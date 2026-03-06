@@ -1,0 +1,259 @@
+.layoutContainer {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f1f5f9;
+}
+
+/* SIDEBAR STYLES */
+.sidebar {
+    width: 280px;
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarHeader {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logoBox {
+    background-color: #2563eb;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.brandName {
+    font-size: 22px;
+    font-weight: 900;
+    color: #1e293b;
+    letter-spacing: -0.5px;
+}
+
+.sidebarHr {
+    border: 0;
+    border-top: 1px solid #f1f5f9;
+    margin: 0 25px;
+}
+
+.navigation {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.navLink:hover {
+    background-color: #f8fafc;
+    color: #2563eb;
+}
+
+/* MAIN CONTENT WRAPPER */
+.mainWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP NAVBAR */
+.topNavbar {
+    height: 80px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.pageTitle h4 {
+    color: #1e293b;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.navbarActions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.actionItem {
+    position: relative;
+}
+
+.iconBtn {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+}
+
+.notifBadge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+/* PROFILE TRIGGER */
+.profileTrigger {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 12px;
+    transition: background 0.2s;
+}
+
+.profileTrigger:hover {
+    background-color: #f8fafc;
+}
+
+.avatarCircle {
+    width: 40px;
+    height: 40px;
+    background-color: #dbeafe;
+    color: #2563eb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.doctorMeta {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.doctorName {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.doctorSpecialty {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.rotateIcon {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+/* DROPDOWN MENU */
+.dropdownMenu {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 240px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdownHeader {
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+.dropdownContent p {
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #475569;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.dropdownLink, .logoutBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #1e293b;
+    font-size: 14px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.dropdownLink:hover {
+    background-color: #f1f5f9;
+    color: #2563eb;
+}
+
+.menuHr {
+    border: 0;
+    border-top: 1px solid #f1f5f9;
+    margin: 8px 0;
+}
+
+.logoutBtn {
+    color: #ef4444;
+}
+
+.logoutBtn:hover {
+    background-color: #fef2f2;
+}
+
+/* PAGE BODY AREA */
+.pageBody {
+    padding: 40px;
+    flex: 1;
+}

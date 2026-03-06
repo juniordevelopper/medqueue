@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Global Reset */
+        body { margin: 0; padding: 0; min-width: 100%; width: 100% !important; background-color: #f8fafc; }
+        .wrapper { width: 100%; table-layout: fixed; background-color: #f8fafc; padding-bottom: 40px; }
+        
+        /* Container - Telefonlar uchun max-width 100% */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Header - Yashil (Muvaffaqiyat belgisi) */
+        .header {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 { margin: 0; font-size: 28px; letter-spacing: -1px; }
+
+        /* Body Content */
+        .content {
+            padding: 30px 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #334155;
+            line-height: 1.6;
+        }
+        .welcome-text { font-size: 18px; font-weight: bold; color: #1e293b; }
+        
+        /* Info Box (Vaqt va ma'lumot) */
+        .info-box {
+            background-color: #f0fdf4;
+            border: 1px dashed #22c55e;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #166534;
+        }
+
+        /* Ad/Features Section (Reklama qismi) */
+        .features {
+            background-color: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+        .feature-item {
+            margin-bottom: 12px;
+            font-size: 14px;
+            display: block;
+        }
+        .feature-icon { color: #10b981; font-weight: bold; margin-right: 8px; }
+
+        /* Button */
+        .btn-container { text-align: center; margin: 30px 0; }
+        .btn {
+            background-color: #10b981;
+            color: #ffffff !important;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 800;
+            display: inline-block;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #94a3b8;
+            background-color: #f1f5f9;
+        }
+
+        /* Mobile Adjustments */
+        @media screen and (max-width: 600px) {
+            .content { padding: 20px 15px; }
+            .header h1 { font-size: 24px; }
+            .container { border-radius: 0; border: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1>MedQueue</h1>
+                <p style="margin-top: 10px; opacity: 0.9;">Tibbiyot endi yanada yaqinroq!</p>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <p class="welcome-text">Salom, {{ full_name }}!</p>
+                <p>MedQueue oilasiga xush kelibsiz! Sizning hisobingiz muvaffaqiyatli faollashtirildi.</p>
+
+                <div class="info-box">
+                    🕒 <b>Ro'yxatdan o'tilgan vaqt:</b> {{ current_time }}<br>
+                    📧 <b>Tasdiqlangan email:</b> {{ user_email }}
+                </div>
+
+                <p><b>Biz bilan nimalarga erishasiz?</b></p>
+                <div class="features">
+                    <span class="feature-item"><span class="feature-icon">✔</span> Shifokorlar navbatini onlayn kuzatish</span>
+                    <span class="feature-item"><span class="feature-icon">✔</span> Masofaviy chat va tahlil natijalari almashinuvi</span>
+                    <span class="feature-item"><span class="feature-icon">✔</span> Video-konsultatsiya orqali vaqtni tejash</span>
+                </div>
+
+                <p style="font-size: 13px; color: #64748b; text-align: center;">
+                    Iltimos, bu xabarga javob bermang!
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                &copy; 2026 MedQueue Inc. Barcha huquqlar himoyalangan.<br>
+                O'zbekiston, Toshkent sh.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

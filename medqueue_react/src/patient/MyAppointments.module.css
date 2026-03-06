@@ -1,0 +1,91 @@
+.container {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 25px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.appointmentCard {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #f1f5f9;
+}
+
+.doctorInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.meta h4 {
+    margin: 0;
+    font-size: 17px;
+    color: #1e293b;
+}
+
+.meta p {
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    color: #10b981;
+    font-weight: 700;
+}
+
+.queueInfo {
+    text-align: center;
+    min-width: 100px;
+}
+
+.queueInfo h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #3b82f6;
+}
+
+.statusBadge {
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.waiting { background: #eff6ff; color: #3b82f6; }
+.completed { background: #ecfdf5; color: #10b981; }
+.cancelled { background: #fef2f2; color: #ef4444; }
+
+.cancelBtn {
+    background: #fef2f2;
+    color: #ef4444;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.cancelBtn:hover { background: #fee2e2; }

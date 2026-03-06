@@ -1,0 +1,90 @@
+.fullPage {
+    width: 100%;
+    height: 100vh; /* Scrol bo'lmasligi uchun aniq balandlik */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7f6;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Scrollni taqiqlash */
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.centerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Animatsiya qilingan yashil Check */
+.iconWrapper {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(46, 204, 113, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+
+.checkIcon { color: #2ecc71; animation: bounce 1s ease-out; }
+@keyframes bounce {
+    0% { transform: scale(0); }
+    60% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.successTitle { color: #1a2a6c; font-size: 36px; font-weight: 900; margin: 0; }
+.message { color: #7f8c8d; font-size: 18px; line-height: 1.5; margin: 0; }
+
+.loginBtn {
+    margin-top: 1rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3);
+}
+
+.loginBtn:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(46, 204, 113, 0.4); }
+
+/* Xatolik holati */
+.errorIcon { color: #e74c3c; }
+.errorTitle { color: #c0392b; font-size: 32px; font-weight: 800; }
+.retryBtn { color: #3498db; text-decoration: none; font-weight: 700; margin-top: 10px; }
+
+.spinner { color: #3498db; animation: rotate 1s linear infinite; }
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Mobil moslashuv */
+@media screen and (max-width: 480px) {
+    .card { padding: 2rem 1.5rem; border-radius: 20px; }
+    .successTitle { font-size: 28px; }
+    .message { font-size: 16px; }
+}
